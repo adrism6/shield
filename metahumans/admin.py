@@ -10,11 +10,13 @@ class PowerAdmin(admin.ModelAdmin):
 
 admin.site.register(models.Power, PowerAdmin)
 
+
 class MetaHumanAdmin(admin.ModelAdmin):
-    list_display = ('name', 'country', 'active', 'level', 'ally')
+    list_display = ('name', 'country', 'active', 'level')
     list_filter = ('active', 'level', 'powers')
 
 admin.site.register(models.MetaHuman, MetaHumanAdmin)
+
 
 class TeamAdmin(admin.ModelAdmin):
     list_display = ('name', 'headquarter')
