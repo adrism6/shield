@@ -3,7 +3,6 @@ from django.utils.safestring import mark_safe
 
 register = template.Library()
 
-
 @register.filter
 def danger_level(level):
     if level < 30:
@@ -16,4 +15,3 @@ def danger_level(level):
         color = 'red'
         label = "Alto"
     return mark_safe(f"<span style='color: {color};'>{label}</span>")
-
